@@ -12,6 +12,12 @@
         <action
             android:id="@+id/goto_boardView"
             app:destination="@id/boardView" />
+        <action
+            android:id="@+id/action_boardSelection_to_boardView2"
+            app:destination="@id/boardView2" />
+        <action
+            android:id="@+id/action_boardSelection_to_profileView"
+            app:destination="@id/profileView" />
     </fragment>
     <fragment
         android:id="@+id/welcome"
@@ -39,4 +45,18 @@
         android:name="com.example.jmobile.PostView"
         android:label="fragment_post_view"
         tools:layout="@layout/fragment_post_view" />
+    <fragment
+        android:id="@+id/boardView2"
+        android:name="com.example.jmobile.boardView2"
+        android:label="fragment_board_view2"
+        tools:layout="@layout/fragment_board_view2" >
+        <action
+            android:id="@+id/action_boardView2_to_postView"
+            app:destination="@id/postView" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileView"
+        android:name="com.example.jmobile.profileView"
+        android:label="fragment_profile_view"
+        tools:layout="@layout/fragment_profile_view" />
 </navigation>
