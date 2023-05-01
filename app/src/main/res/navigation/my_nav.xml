@@ -50,7 +50,7 @@
         tools:layout="@layout/fragment_profile_view" />
     <fragment
         android:id="@+id/login"
-        android:name="com.example.jmobile.login"
+        android:name="com.example.jmobile.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
