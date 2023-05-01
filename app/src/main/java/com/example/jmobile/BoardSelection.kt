@@ -1,13 +1,13 @@
 package com.example.jmobile
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
+import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,17 +38,6 @@ class BoardSelection : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_board_selection, container, false)
-
-        val boardList = view.findViewById<ListView>(R.id.boardList)
-        val BOARDS = arrayListOf<String?>("mato", "tek", "waifu")
-        val adapter  = container?.let {
-            ArrayAdapter<String?>(
-                it.context,
-                android.R.layout.simple_list_item_1,
-                BOARDS,
-            )
-        };
-        boardList.adapter = adapter
 
         return view;
     }

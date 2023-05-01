@@ -14,7 +14,7 @@ data class User(
 )
 
 data class Board (
-    val posts : Array<Post>,
     val name : String,
     val desc : String,
+    val posts : ArrayList<Post>,
 )

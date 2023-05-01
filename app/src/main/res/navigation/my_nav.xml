@@ -30,6 +30,9 @@
         <action
             android:id="@+id/goto_postView"
             app:destination="@id/postView" />
+        <argument
+            android:name="boardID"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/postView"
