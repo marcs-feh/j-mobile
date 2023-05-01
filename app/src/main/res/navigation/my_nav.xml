@@ -10,14 +10,11 @@
         android:label="fragment_board_selection"
         tools:layout="@layout/fragment_board_selection" >
         <action
-            android:id="@+id/goto_boardView"
-            app:destination="@id/boardView" />
-        <action
-            android:id="@+id/action_boardSelection_to_boardView2"
-            app:destination="@id/boardView2" />
-        <action
             android:id="@+id/action_boardSelection_to_profileView"
             app:destination="@id/profileView" />
+        <action
+            android:id="@+id/action_boardSelection_to_boardView"
+            app:destination="@id/boardView" />
     </fragment>
     <fragment
         android:id="@+id/welcome"
@@ -25,33 +22,25 @@
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
-            android:id="@+id/goto_boardSelection"
-            app:destination="@id/boardSelection" />
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/login" />
     </fragment>
     <fragment
-        android:id="@+id/boardView"
+        android:id="@+id/postView"
         android:name="com.example.jmobile.BoardView"
         android:label="fragment_board_view"
         tools:layout="@layout/fragment_board_view" >
-        <action
-            android:id="@+id/goto_postView"
-            app:destination="@id/postView" />
         <argument
             android:name="boardID"
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/postView"
+        android:id="@+id/boardView"
         android:name="com.example.jmobile.PostView"
         android:label="fragment_post_view"
-        tools:layout="@layout/fragment_post_view" />
-    <fragment
-        android:id="@+id/boardView2"
-        android:name="com.example.jmobile.boardView2"
-        android:label="fragment_board_view2"
-        tools:layout="@layout/fragment_board_view2" >
+        tools:layout="@layout/fragment_post_view" >
         <action
-            android:id="@+id/action_boardView2_to_postView"
+            android:id="@+id/action_boardView_to_postView"
             app:destination="@id/postView" />
     </fragment>
     <fragment
@@ -59,4 +48,13 @@
         android:name="com.example.jmobile.profileView"
         android:label="fragment_profile_view"
         tools:layout="@layout/fragment_profile_view" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.jmobile.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_boardSelection"
+            app:destination="@id/boardSelection" />
+    </fragment>
 </navigation>
