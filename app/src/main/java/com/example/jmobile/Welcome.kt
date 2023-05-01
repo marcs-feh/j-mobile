@@ -38,7 +38,7 @@ class Welcome : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_welcome, container, false)
         val textBtn = view.findViewById<TextView>(R.id.startBrowsing)
-        textBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_boardSelection)}
+        textBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_login)}
         return view
     }
 
