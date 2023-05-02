@@ -41,9 +41,11 @@ class BoardSelection : Fragment() {
         val backBtn = view.findViewById<TextView>(R.id.goBack)
         val profileBtn = view.findViewById<TextView>(R.id.profileBtn)
         val matoBtn =  view.findViewById<TextView>(R.id.matoLabel)
+        val tekBtn =  view.findViewById<TextView>(R.id.tekLabel)
         backBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_welcome) }
         profileBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_profileView) }
-        matoBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_BoardView) }
+        matoBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_boardView1) }
+        tekBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_boardView2) }
 
         return view;
     }

@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.ListView
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,7 +34,7 @@ class BoardView : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_board_view, container, false)
+        val view = inflater.inflate(R.layout.fragment_post_view, container, false)
         val postBtn = view.findViewById<ImageView>(R.id.postContent)
         postBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_postView) }
         return view;

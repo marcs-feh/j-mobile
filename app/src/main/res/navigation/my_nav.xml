@@ -5,6 +5,15 @@
     android:id="@+id/my_nav"
     app:startDestination="@id/welcome">
     <fragment
+        android:id="@+id/boardView3"
+        android:name="com.example.jmobile.PostView"
+        android:label="fragment_post_view"
+        tools:layout="@layout/fragment_board_view">
+        <action
+            android:id="@+id/goto_postView"
+            app:destination="@id/postView" />
+    </fragment>
+    <fragment
         android:id="@+id/boardSelection"
         android:name="com.example.jmobile.BoardSelection"
         android:label="fragment_board_selection"
@@ -13,11 +22,14 @@
             android:id="@+id/goto_profileView"
             app:destination="@id/profileView" />
         <action
-            android:id="@+id/goto_BoardView"
+            android:id="@+id/goto_boardView1"
             app:destination="@id/boardView" />
         <action
             android:id="@+id/goto_welcome"
             app:destination="@id/welcome" />
+        <action
+            android:id="@+id/action_boardSelection_to_boardView3"
+            app:destination="@id/boardView3" />
     </fragment>
     <fragment
         android:id="@+id/welcome"
@@ -32,7 +44,7 @@
         android:id="@+id/postView"
         android:name="com.example.jmobile.BoardView"
         android:label="fragment_board_view"
-        tools:layout="@layout/fragment_board_view" >
+        tools:layout="@layout/fragment_post_view" >
         <argument
             android:name="boardID"
             app:argType="integer" />
@@ -41,7 +53,7 @@
         android:id="@+id/boardView"
         android:name="com.example.jmobile.PostView"
         android:label="fragment_post_view"
-        tools:layout="@layout/fragment_post_view" >
+        tools:layout="@layout/fragment_board_view" >
         <action
             android:id="@+id/goto_postView"
             app:destination="@id/postView" />
