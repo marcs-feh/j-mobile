@@ -38,6 +38,7 @@ class Login : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_login, container, false)
         val skipBtn = view.findViewById<TextView>(R.id.skipLogin)
+
         skipBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_boardSelection) }
         return view
     }

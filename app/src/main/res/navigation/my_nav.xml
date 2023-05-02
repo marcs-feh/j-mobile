@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_boardSelection_to_boardView"
             app:destination="@id/boardView" />
+        <action
+            android:id="@+id/goto_welcome"
+            app:destination="@id/welcome" />
     </fragment>
     <fragment
         android:id="@+id/welcome"

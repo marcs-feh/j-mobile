@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -38,6 +39,9 @@ class BoardSelection : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_board_selection, container, false)
+
+        val backBtn = view.findViewById<TextView>(R.id.goBack)
+        backBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_welcome) }
 
         return view;
     }
