@@ -43,7 +43,7 @@
         android:label="fragment_post_view"
         tools:layout="@layout/fragment_post_view" >
         <action
-            android:id="@+id/action_boardView_to_postView"
+            android:id="@+id/goto_postView"
             app:destination="@id/postView" />
     </fragment>
     <fragment

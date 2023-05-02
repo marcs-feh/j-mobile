@@ -7,8 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,8 +40,10 @@ class BoardSelection : Fragment() {
 
         val backBtn = view.findViewById<TextView>(R.id.goBack)
         val profileBtn = view.findViewById<TextView>(R.id.profileBtn)
+        val matoBtn =  view.findViewById<TextView>(R.id.matoLabel)
         backBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_welcome) }
         profileBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_profileView) }
+        matoBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_BoardView) }
 
         return view;
     }
