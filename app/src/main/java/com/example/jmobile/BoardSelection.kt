@@ -41,7 +41,9 @@ class BoardSelection : Fragment() {
         val view = inflater.inflate(R.layout.fragment_board_selection, container, false)
 
         val backBtn = view.findViewById<TextView>(R.id.goBack)
+        val profileBtn = view.findViewById<TextView>(R.id.profileBtn)
         backBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_welcome) }
+        profileBtn.setOnClickListener { Navigation.findNavController(view).navigate(R.id.goto_profileView) }
 
         return view;
     }

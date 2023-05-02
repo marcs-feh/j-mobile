@@ -10,10 +10,10 @@
         android:label="fragment_board_selection"
         tools:layout="@layout/fragment_board_selection" >
         <action
-            android:id="@+id/action_boardSelection_to_profileView"
+            android:id="@+id/goto_profileView"
             app:destination="@id/profileView" />
         <action
-            android:id="@+id/action_boardSelection_to_boardView"
+            android:id="@+id/goto_BoardView"
             app:destination="@id/boardView" />
         <action
             android:id="@+id/goto_welcome"
